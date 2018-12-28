@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    #box {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
+    #box1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 0;
+      top: 120px;
+    }
+    #box2 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 0;
+      top: 240px;
+    }
+    #box3 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      position: absolute;
+      left: 0;
+      top: 360px;
+    }
+  </style>
+
+  <script>
+
+    document.addEventListener('DOMContentLoaded',function(ev){
+
+      var oBox = document.querySelector('#box');
+      var oBox1 = document.querySelector('#box1');
+      var oBox2 = document.querySelector('#box2');
+      var oBox3 = document.querySelector('#box3');
+
+      touch.on(oBox,'doubletap',function (ev) {
+        oBox.style.width = 120+'px';
+        oBox.style.height = 120+'px';
+        oBox.style.background = 'pink';
+        oBox.innerHTML = '再';
+      })
+      touch.on(oBox1,'doubletap',function (ev) {
+        oBox1.style.width = 120+'px';
+        oBox1.style.height = 120+'px';
+        oBox1.style.background = 'yellow';
+        oBox1.innerHTML = '来';
+      })
+      touch.on(oBox2,'doubletap',function (ev) {
+        oBox2.style.width = 120+'px';
+        oBox2.style.height = 120+'px';
+        oBox2.style.background =' blue';
+        oBox2.innerHTML = '一';
+      })
+      touch.on(oBox3,'doubletap',function (ev) {
+        oBox3.style.width = 120+'px';
+        oBox3.style.height = 120+'px';
+        oBox3.style.background = 'green';
+        oBox3.innerHTML = '瓶';
+      })
+      
+      
+    },false);
+
+
+
+  </script>
+
+</head>
+
+<body>
+
+  <div id="box">点</div>
+  <div id="box1">击</div>
+
+  <div id="box2">看</div>
+
+  <div id="box3">看</div>
+
+
+
+<script src="./teacher/day04/js/touch-0.2.14.js"></script>
+</body>
+
+</html>
